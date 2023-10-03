@@ -1,4 +1,6 @@
-<script></script>
+<script>
+
+</script>
 
 <template>
   <header class="display-flex-row justify-content-center">
