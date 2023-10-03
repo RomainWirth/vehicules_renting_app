@@ -9,7 +9,7 @@ export default {
 </script>
 
 <template>
-  <div class="bloc-page display-flex-row justify-content-center">
+  <div class="bloc-page display-flex-column align-items-center">
     <Header />
     <RouterView />
   </div>
