@@ -1,0 +1,10 @@
+@import '../utils/_variables.scss';
+
+body {
+  margin: 0;
+  padding: 0;
+}
+.bloc-page {
+  width: 100%;
+  background-color: $color-primary;
+}
