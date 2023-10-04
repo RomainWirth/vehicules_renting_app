@@ -1,4 +1,6 @@
 <script >
+import axios from 'axios'
+import RentBarFilter from "../components/RentBarFilter.vue";
 import Vehicule from '../components/Vehicule.vue'
 
 export default {
@@ -6,6 +8,7 @@ export default {
     this.fetchAllVehicules()
   },
   components: {
+    RentBarFilter,
     Vehicule,
   },
   data(){
@@ -30,7 +33,7 @@ export default {
           throw new Error('Request failed with status : ' + response.status)
         }
         const data = await response.json();
-        console.log(data);
+        console.log(data)
         this.dataVehicules = data
       } catch (error) {
         console.log('Error : ' + error)
@@ -41,9 +44,10 @@ export default {
 </script>
 
 <template>
-  <main>
-    <div class="display-flex-row flex-wrap">
-      <div v-for="dataVehicule in dataVehicules" :key="dataVehicules.id" class="display-flex-column vehicule-card">
+  <main class="display-flex-column align-items-center">
+    <div class="home-view">
+      <RentBarFilter />
+      <div v-for="dataVehicule in dataVehicules" :key="dataVehicules.id" class="display-flex-column align-items-start vehicule-card">
         <Vehicule
             :vehiculeType="dataVehicule.type"
             :brand="dataVehicule.brand"
@@ -51,6 +55,8 @@ export default {
             :color="dataVehicule.color"
             :displacement="dataVehicule.displacement"
             :volumeCapacity="dataVehicule.volumeCapacity"
+            :applicationFee="dataVehicule.applicationFee"
+            :cleaningCost="dataVehicule.cleaningCost"
             :startingPrice="dataVehicule.startingPrice"
             :mileagePrice="dataVehicule.mileagePrice"
         />
