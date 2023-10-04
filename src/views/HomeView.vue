@@ -1,6 +1,6 @@
 <script >
 import axios from 'axios'
-import RentBarFilter from "../components/RentBarFilter.vue";
+import DateFilter from "../components/DateFilter.vue";
 import Vehicule from '../components/Vehicule.vue'
 
 export default {
@@ -8,7 +8,7 @@ export default {
     this.fetchAllVehicules()
   },
   components: {
-    RentBarFilter,
+    DateFilter,
     Vehicule,
   },
   data(){
@@ -46,7 +46,8 @@ export default {
 <template>
   <main class="display-flex-column align-items-center">
     <div class="home-view">
-      <RentBarFilter />
+      <DateFilter />
+
       <div v-for="dataVehicule in dataVehicules" :key="dataVehicules.id" class="display-flex-column align-items-start vehicule-card">
         <Vehicule
             :vehiculeType="dataVehicule.type"

@@ -52,15 +52,17 @@ export default {
 
 <template>
   <h2>Type de véhicule : {{vehiculeType}}</h2>
-  <div class="display-flex-row">
+  <div class="display-flex-row justify-content-evenly">
     <p class="">Marque : {{brand}}</p>
     <p>Modèle : {{model}}</p>
     <p>Couleur : {{color}}</p>
   </div>
-  <div class="display-flex-row">
+  <div class="display-flex-row justify-content-evenly">
     <p>Cylindrée : {{displacement}}</p>
     <p>Capacité : {{volumeCapacity}}</p>
   </div>
-  <p>Prix de base : {{startingPrice}}</p>
-  <p>{{mileagePrice}}</p>
+  <div>
+    <p>Prix de base : {{startingPrice}}</p>
+    <p>Prix au km : {{mileagePrice}}</p>
+  </div>
 </template>
