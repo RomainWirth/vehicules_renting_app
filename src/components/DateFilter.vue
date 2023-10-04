@@ -1,7 +1,7 @@
 <script>
-// import {useRentingPeriodStore} from "../stores/rentingPeriod";
-//
-// const store = useRentingPeriodStore
+import {useRentingPeriodStore} from "../stores/rentingPeriod";
+
+const store = useRentingPeriodStore
 
 export default {
   data() {
@@ -14,8 +14,8 @@ export default {
   },
   methods: {
     getDates() {
-      this.startingDate = this.newStartingDate
-      this.endingDate = this.newEndingDate
+      store.startingDate = this.newStartingDate
+      store.endingDate = this.newEndingDate
     }
   }
 }

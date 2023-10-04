@@ -5,8 +5,8 @@ export const useRentingPeriodStore = defineStore({
     id: 'rentingPeriod',
     state: () => ({
         dataVehicules: [],
-        startingDate: Date,
-        endingDate: Date,
+        startingDate: null,
+        endingDate: null,
         error: null
     }),
     // getters: {
