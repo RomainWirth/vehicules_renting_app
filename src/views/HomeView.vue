@@ -38,6 +38,14 @@ export default {
       } catch (error) {
         console.log('Error : ' + error)
       }
+    },
+    async getAvailableVehicules() {
+      try {
+        const response = await axios.post(import.meta.env.VITE_API_VEHICULES_ENDPOINT + '/vehicules')
+
+      } catch (error) {
+        console.log('Erreur : ' + error)
+      }
     }
   }
 }

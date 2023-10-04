@@ -51,10 +51,10 @@ export default {
 </script>
 
 <template>
-  <h2>Type de véhicule : {{vehiculeType}}</h2>
+  <h2>Modèle : {{model}}</h2>
+  <h3>type : {{vehiculeType}}</h3>
   <div class="display-flex-row justify-content-evenly">
     <p class="">Marque : {{brand}}</p>
-    <p>Modèle : {{model}}</p>
     <p>Couleur : {{color}}</p>
   </div>
   <div class="display-flex-row justify-content-evenly">
