@@ -1,6 +1,7 @@
 <script >
 import {mapStores} from "pinia";
 import DateFilter from "../components/DateFilter.vue";
+import VehiculesFilter from "../components/VehiculesFilter.vue"
 import Vehicule from '../components/Vehicule.vue'
 import {useRentingPeriodStore} from "../stores/vehicules.js";
 
@@ -10,6 +11,7 @@ export default {
   // },
   components: {
     DateFilter,
+    VehiculesFilter,
     Vehicule,
   },
   // data() {
@@ -51,6 +53,13 @@ export default {
   <main class="display-flex-column align-items-center">
     <div class="home-view">
       <DateFilter />
+
+      <div>
+        <p>
+          <VehiculesFilter />
+        </p>
+      </div>
+
 <!--      <div v-for="dataVehicule in dataVehicules" :key="dataVehicules.id" class="display-flex-column align-items-start vehicule-card">-->
       <div v-for="dataVehicule in rentingPeriodStore.dataVehicules" :key="rentingPeriodStore.dataVehicules.id" class="display-flex-column align-items-start vehicule-card">
         <Vehicule

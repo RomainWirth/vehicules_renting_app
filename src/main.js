@@ -2,6 +2,8 @@ import './styles/main.scss'
 
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
+import Antd from 'ant-design-vue';
+import 'ant-design-vue/dist/reset.css';
 
 import App from './App.vue'
 import router from './router'
@@ -16,4 +18,4 @@ app.use(router)
 app.use(VueAxios, axios)
 app.provide('axios', app.config.globalProperties.axios)
 
-app.mount('#app')
+app.use(Antd).mount('#app')
