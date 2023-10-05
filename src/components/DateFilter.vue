@@ -1,8 +1,6 @@
 <script>
 import {mapStores} from "pinia";
 import {useRentingPeriodStore} from "../stores/vehicules.js";
-
-
 export default {
   data() {
     return {

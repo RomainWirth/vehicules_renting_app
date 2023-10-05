@@ -58,11 +58,11 @@ export default {
     <p>Couleur : {{color}}</p>
   </div>
   <div class="display-flex-row justify-content-evenly">
-    <p>Cylindrée : {{displacement}}</p>
-    <p>Capacité : {{volumeCapacity}}</p>
+    <p>Cylindrée : {{displacement}} cm3 </p>
+    <p>Capacité : {{volumeCapacity}} m3 </p>
   </div>
   <div>
-    <p>Prix de base : {{startingPrice}}</p>
-    <p>Prix au km : {{mileagePrice}}</p>
+    <p>Prix de base : {{startingPrice}} €</p>
+    <p>Prix au km : {{mileagePrice}} €</p>
   </div>
 </template>
