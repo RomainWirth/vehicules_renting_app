@@ -18,7 +18,7 @@ export const useRentingPeriodStore = defineStore({
         async getAvailableVehicules() {
             // this.dataVehicules = []
             console.log(this.dataVehicules)
-            let url = import.meta.env.VITE_API_RESERVATIONS_ENDPOINT + '/reservations/available-vehicules/' + this.startingDate + '/' + this.endingDate
+            let url = import.meta.env.VITE_API_RESERVATIONS_ENDPOINT + '/reservations/available-vehicules/' + this.startingDate + '/' + this.endingDate + '/2000'
             const request = new Request (
                 url,
                 {
