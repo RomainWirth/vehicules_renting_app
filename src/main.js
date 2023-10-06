@@ -2,8 +2,10 @@ import './styles/main.scss'
 
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
-import Antd from 'ant-design-vue';
-import 'ant-design-vue/dist/reset.css';
+import { Quasar } from 'quasar'
+import '@quasar/extras/material-icons/material-icons.css'
+import 'quasar/src/css/index.sass'
+
 
 import App from './App.vue'
 import router from './router'
@@ -17,5 +19,8 @@ app.use(createPinia())
 app.use(router)
 app.use(VueAxios, axios)
 app.provide('axios', app.config.globalProperties.axios)
+app.use(Quasar, {
+    plugins: {},
+})
 
-app.use(Antd).mount('#app')
+app.mount('#app')

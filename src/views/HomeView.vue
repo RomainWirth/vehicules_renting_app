@@ -55,9 +55,7 @@ export default {
       <DateFilter />
 
       <div>
-        <p>
-          <VehiculesFilter />
-        </p>
+        <VehiculesFilter />
       </div>
 
 <!--      <div v-for="dataVehicule in dataVehicules" :key="dataVehicules.id" class="display-flex-column align-items-start vehicule-card">-->
